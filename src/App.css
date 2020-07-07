@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-family: 'Fira Sans', monospace, sans-serif;
+    background-color: rgb(73, 137, 197);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title{
+    height: 100px;
+    width: 100%;
+    text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title h1{
+    padding: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.container{
+    box-sizing: border-box;
+    /* Flex */
+    display: flex;
+    justify-content: space-between;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .sidebar-left{
+    width: 150px;
+    /* Flex */
+    order: 1;
+    display: flex;
+    flex-direction: column;
+}
+.container .main-content{
+    width: 100%;
+    /* Parent Flex */
+    order: 2;
+    /* Flex */
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .main-content .post{
+    width: 100%;
+    padding: 20px;
+}
+.container .main-content .post .post-author{
+    padding: 20px;
+    /* Flex */
+    display: flex;
+}
+.container .main-content .post .post-author p{
+    padding-left: 20px;
+    align-self: flex-end;
+}
+.container .main-content .post .post-author img{
+    height: 50px;
+    width: 50px;
+}
+.container .main-content .post .post-text{
+    padding: 20px;
+}
+.container .main-content .post .post-buttons{
+    padding: 20px;
+    /* Flex */
+    display: flex;
+    justify-content: center;
+}
+.container .sidebar-right{
+    width: 150px;
+    /* Flex */
+    order: 3;
 }
